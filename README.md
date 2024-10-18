@@ -1,29 +1,48 @@
-Tech test
-
-This project was built using Laravel Sail so will require Docker desktop in order to be tested.
+## Tech test
+This project was built using Laravel Sail and has the following dependancies:
+- docker
+- npm
+- mysql (client)
 
 Steps in order to start up the project:
 
-Step 1 - clone the repository 
+### Clone the repository
+```
+git clone git@github.com:bbutler919/laravel-tech-test.git
+```
 
-step 2 - after cloning the repository, configure the environment by "cp .env.example .env"
+### Configure the environment with
+```
+"cp .env.example .env"
+```
 
-step 3 update the .env file with the following:
+### Update the .env:
+```
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=sail
 DB_PASSWORD=password
+```
 
-step 4 - after starting Docker desktop you will need to set up Laravel sail this is done with "./vendor/bin/sail up -d"
+### Starting laravel sail
+In the project root directory run
+```
+./vendor/bin/sail up -d
+```
 
-step 5 - run the database migations "./vendor/bin/sail artisan migrate"
+### Run database migrations
+```
+./vendor/bin/sail artisan migrate
+```
 
-step 6 - install node dependencies and compile the assets with 
+### install node dependencies and run
+```
 ./vendor/bin/sail npm install
 ./vendor/bin/sail npm run dev
+```
 
-the application should now be available at - http://localhost
-
+The application should now be available at - http://localhost
+You can view the mysql database with the supplied database connection details used in the .env using yur preferred mysql client
 
