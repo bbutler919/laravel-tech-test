@@ -28,7 +28,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gray-800 text-white py-4 absolute bottom-0 w-full">
+    <footer class="mt-auto w-full bg-gray-800 text-white py-4">
         <p class="text-center">&copy; {{ date('Y') }} Benjamin Butler</p>
     </footer>
 </body>
